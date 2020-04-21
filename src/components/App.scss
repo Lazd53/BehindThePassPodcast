@@ -1,5 +1,6 @@
 /* GLOBAL VARIABLES */
 $color-primary: #6AAAFF;
+$color-secondary: #707070;
 $title-font: 30px;
 $lg-font: 20px;
 $md-font: 18px;
@@ -18,7 +19,34 @@ header {
   height: 60px;
   padding-left: 20px;
   align-items: center;
+  border-bottom: 2px solid #5B8ED1;
   h1{
     font-size: $lg-font;
+  }
+}
+
+main {
+  padding: 0 20px 15px 20px;
+  border-bottom: 2px solid $color-secondary;
+  .social-media-btn-container{
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    justify-content: space-between;
+    .social-media-button{
+      width: 180px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: white;
+      border: 2px solid $color-secondary;
+      border-radius: 15px;
+    }
+    .social-media-button:hover, .social-media-button:focus{
+      background-color: $color-primary;
+      color: white;
+      outline: none;
+    }
   }
 }
