@@ -1,0 +1,24 @@
+/* GLOBAL VARIABLES */
+$color-primary: #6AAAFF;
+$title-font: 30px;
+$lg-font: 20px;
+$md-font: 18px;
+$sm-font: 14px;
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  background-color: $color-primary;
+  color: white;
+  height: 60px;
+  padding-left: 20px;
+  align-items: center;
+  h1{
+    font-size: $lg-font;
+  }
+}
