@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+
+import BtpHeader from './BtpHeader';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        temp header
-      </header>
+      <BtpHeader />
     </div>
   );
 }
