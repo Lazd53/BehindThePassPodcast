@@ -1,5 +1,5 @@
-/* GLOBAL VARIABLES */
 $color-primary: #6AAAFF;
+$color-primary-dark: #5B8ED1;
 $color-secondary: #707070;
 $title-font: 30px;
 $lg-font: 20px;
@@ -19,15 +19,16 @@ header {
   height: 60px;
   padding-left: 20px;
   align-items: center;
-  border-bottom: 2px solid #5B8ED1;
+  border-bottom: 2px solid $color-primary-dark;
   h1{
     font-size: $lg-font;
   }
 }
 
 main {
-  padding: 0 20px 15px 20px;
-  border-bottom: 2px solid $color-secondary;
+  padding: 0 15px 15px 15px;
+  box-sizing: content-box;
+  border-bottom: 2px solid $color-primary;
   .social-media-btn-container{
     display: flex;
     flex-direction: column;
@@ -36,10 +37,12 @@ main {
     .social-media-button{
       width: 180px;
       height: 30px;
+      font-weight: bolder;
       display: flex;
       justify-content: center;
       align-items: center;
       background: white;
+      color: $color-secondary;
       border: 2px solid $color-secondary;
       border-radius: 15px;
     }
@@ -47,6 +50,47 @@ main {
       background-color: $color-primary;
       color: white;
       outline: none;
+    }
+  }
+}
+
+.section-episodes{
+  padding: 0 15px 15px 15px;
+  .section-title{
+    font-size: $lg-font;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  .section-episodes-container{
+    padding: 0;
+    border: 1px  $color-secondary;
+    border-style: solid none solid none;
+    .single-episode{
+      margin-bottom: 20px;
+      border-bottom: 1px solid $color-secondary;
+      .episode-title-line{
+        display: grid;
+        grid-template-columns: auto 50px;
+        grid-template-rows: 30px 30px;
+        align-items: baseline;
+        .episode-title{
+          margin: 0;
+          padding-right: 5px;
+          font-size: $md-font;
+          font-weight: normal;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        .episode-runtime{
+          margin: 0;
+          text-align: right;
+        }
+        .episode-date{
+          margin: 0;
+          align-self: flex-start;
+        }
+      }
     }
   }
 }
