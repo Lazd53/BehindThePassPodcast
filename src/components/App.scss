@@ -29,6 +29,11 @@ header {
   }
 }
 
+main{
+  grid-area: "content";
+
+}
+
 .podcast-description {
   padding: 0 15px 15px 15px;
   box-sizing: content-box;
@@ -101,11 +106,7 @@ header {
 
 
 .footer-play-bar{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
+  grid-area: 'footer';
   background: $color-primary;
   border-top: $color-primary-dark 2px solid;
 }
