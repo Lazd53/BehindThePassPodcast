@@ -1,0 +1,3 @@
+export const IMPORT_PODCASTS = "IMPORT_PODCASTS";
+export const SELECT_PODCAST = "SELECT_PODCAST";
+export const CLEAR_ID = "CLEAR_ID";
