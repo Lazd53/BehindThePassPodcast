@@ -11,28 +11,32 @@ const testPods = {
     episodeNo: 1,
     name: "theFirstEpisode",
     runTime: "1232",
-    airDate: "11/12/18"
+    airDate: "11/12/18",
+    description: "The one where they talk about stuff. It's actually kinda interesting, but only in the 'I want to take up some space' sort of way"
   },
   aarsafd: {
     id: "aarsafd",
     episodeNo: 2,
     name: "theSecondEpisode",
     runTime: "142",
-    airDate: "11/14/18"
+    airDate: "11/14/18",
+    description: "The one where they talk about stuff. It's actually kinda interesting, but only in the 'I want to take up some space' sort of way"
   },
   nsrssef: {
     id: "nsrssef",
     episodeNo: 3,
     name: "theThirdEpisode",
     runTime: "142",
-    airDate: "11/15/18"
+    airDate: "11/15/18",
+    description: "The one where they talk about stuff. It's actually kinda interesting, but only in the 'I want to take up some space' sort of way"
   },
   asdfevcd: {
     id: "asdfevcd",
     episodeNo: 4,
     name: "theFourthEpisode",
     runTime: "3953",
-    airDate: "12/15/18"
+    airDate: "12/15/18",
+    description: "The one where they talk about stuff. It's actually kinda interesting, but only in the 'I want to take up some space' sort of way"
   }
 }
 

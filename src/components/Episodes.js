@@ -28,7 +28,7 @@ class Episodes extends React.Component{
           currentEpisode={currentEpisode}
           podcast = {podcast}
           isSelected = {podcast.id === this.state.seeEpisodeDetails}
-          isPlaying = {true}
+          isPlaying = {false}
         />)
     })
 

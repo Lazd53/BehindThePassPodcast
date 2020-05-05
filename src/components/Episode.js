@@ -8,28 +8,59 @@ class Episode extends React.Component{
     handleEpisodeClick(podcast.id)
   }
 
+  handleButtonPress = (event) => {
+    event.stopPropagation();
+    console.log(`Play Episode ${this.props.podcast.name}`)
+  }
+
   buildArticleClassName = () =>{
-    const {isSelected, isPlaying} = this.props
+    const {isSelected, isPlaying} = this.props;
     let className = "single-episode";
-    if ( isSelected ){ className += " selected-now" }
     if ( isPlaying ){ className += " playing-now" }
     return className
   }
 
+  showHideDescription = () => {
+    const {isSelected} = this.props;
+    let className = ""
+  }
+
   render(){
-    const {id, episodeNo, name, runTime, airDate} = this.props.podcast;
+    const {id, episodeNo, name, runTime, airDate, description} = this.props.podcast;
     const {handleEpisodeClick, currentEpisode, isSelected, isPlaying} = this.props
 
     return(
-      <article className={this.buildArticleClassName()}>
+      <article
+        className="single-episode"
+        onClick={this.clickHandler}
+      >
         <div className="episode-title-line">
-          <h3 className="episode-title">Episode {episodeNo}: {name}</h3>
+          <h3 className={
+            isPlaying
+            ?"episode-title playing-now"
+            :"episode-title"
+          }
+          >
+            Episode {episodeNo}: {name}
+          </h3>
           <p className="episode-runtime">{calcRunTime(runTime)}</p>
           <p className="episode-date">{airDate}</p>
         </div>
-        <div className="episode-description">
+        <div className={
+            isSelected
+            ? "episode-description selected-now"
+            : "episode-description"
+          }>
+          <p>{description}</p>
+          {!isPlaying &&
+            <button className="play-button"
+              onClick={this.handleButtonPress}
+            >
+              <div className="play-symbol" />
+              Play
+            </button>
+          }
         </div>
-        <button onClick={this.clickHandler}>TestButton</button>
       </article>
     )
   }
