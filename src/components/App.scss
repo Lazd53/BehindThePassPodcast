@@ -118,17 +118,25 @@ main{
            position: relative;
            background: white;
            height: 34px;
-           width: 180px;
+           width: 130px;
            border: 2px solid $color-secondary;
            border-radius: 17px;
            font-size: 18px;
            margin-bottom: 10px;
            .play-symbol{
              position: absolute;
-             left: 30px;
+             left: 20px;
              border-style: solid;
              border-width: 10px 0 10px 15px;
              border-color: transparent transparent transparent $color-secondary;
+           }
+         }
+         .play-button:hover{
+           background: $color-primary;
+           border-color: $color-primary;
+           color: white;
+           .play-symbol{
+             border-color: transparent transparent transparent white;
            }
          }
        }
