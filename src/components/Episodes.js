@@ -18,7 +18,7 @@ class Episodes extends React.Component{
     const {podcasts, currentPod} = this.props;
     const podcastList = Object.values(podcasts)
     return podcastList.map( podcast => {
-      const currentEpisode = false;
+      let currentEpisode = false;
       if (currentPod && currentPod.id === podcast.id){
           currentEpisode = true
       }

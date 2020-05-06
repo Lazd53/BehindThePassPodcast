@@ -13,21 +13,9 @@ class Episode extends React.Component{
     console.log(`Play Episode ${this.props.podcast.name}`)
   }
 
-  buildArticleClassName = () =>{
-    const {isSelected, isPlaying} = this.props;
-    let className = "single-episode";
-    if ( isPlaying ){ className += " playing-now" }
-    return className
-  }
-
-  showHideDescription = () => {
-    const {isSelected} = this.props;
-    let className = ""
-  }
-
   render(){
-    const {id, episodeNo, name, runTime, airDate, description} = this.props.podcast;
-    const {handleEpisodeClick, currentEpisode, isSelected, isPlaying} = this.props
+    const { episodeNo, name, runTime, airDate, description } = this.props.podcast;
+    const { currentEpisode, isSelected } = this.props
 
     return(
       <article
@@ -36,7 +24,7 @@ class Episode extends React.Component{
       >
         <div className="episode-title-line">
           <h3 className={
-            isPlaying
+            currentEpisode
             ?"episode-title playing-now"
             :"episode-title"
           }
@@ -52,7 +40,7 @@ class Episode extends React.Component{
             : "episode-description"
           }>
           <p>{description}</p>
-          {!isPlaying &&
+          {!currentEpisode &&
             <button className="play-button"
               onClick={this.handleButtonPress}
             >
